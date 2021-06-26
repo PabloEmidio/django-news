@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="article-entry text-center card h-50">
+        <h2 class="card-title bg-dark text-white p-2">{{ object.title }}</h2>
+        <div class="p-5">
+            <p class="font-weight-bolder">by {{ object.author }} | {{ object.date }}</p>
+            <p>{{ object.body }}</p>
+        </div>
+        <div class="card-footer bg-dark text-white p-0">
+            <p><a href="{% url 'article_edit' article.pk %}">Edit</a> |
+            <a href="{% url 'article_delete' article.pk %}">Delete</a></p>
+            <p>Back to <a href="{% url 'article_list' %}">All Articles</a>.</p>
+        </div>
+    </div>
+
+{% endblock content %}
