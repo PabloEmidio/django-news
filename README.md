@@ -1,2 +1,2 @@
 # django-news
-A project of "django for beginners" book
+## A project of "django for beginners" book
